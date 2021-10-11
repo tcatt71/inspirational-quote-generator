@@ -16,7 +16,7 @@
   \************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar dotenv_1 = __importDefault(__webpack_require__(/*! dotenv */ \"dotenv\"));\nif (!dotenv_1.default.config()) {\n    throw new Error(\"env values not found!\");\n}\nexports[\"default\"] = {\n    port: process.env.PORT,\n};\n\n\n//# sourceURL=webpack://starter_template/./src/server/config/index.ts?");
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nvar dotenv_1 = __importDefault(__webpack_require__(/*! dotenv */ \"dotenv\"));\r\nif (!dotenv_1.default.config()) {\r\n    throw new Error(\"env values not found!\");\r\n}\r\nexports[\"default\"] = {\r\n    port: process.env.PORT,\r\n};\r\n\n\n//# sourceURL=webpack://starter_template/./src/server/config/index.ts?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {
   \************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar express_1 = __webpack_require__(/*! express */ \"express\");\nvar router = (0, express_1.Router)();\nrouter.get(\"/api/hello\", function (req, res, next) {\n    res.json(\"World\");\n});\nexports[\"default\"] = router;\n\n\n//# sourceURL=webpack://starter_template/./src/server/routes/index.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nvar express_1 = __webpack_require__(/*! express */ \"express\");\r\nvar router = (0, express_1.Router)();\r\nrouter.get(\"/api/hello\", function (req, res, next) {\r\n    res.json(\"World\");\r\n});\r\nexports[\"default\"] = router;\r\n\n\n//# sourceURL=webpack://starter_template/./src/server/routes/index.ts?");
 
 /***/ }),
 
@@ -36,7 +36,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar 
   \******************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar express_1 = __importDefault(__webpack_require__(/*! express */ \"express\"));\nvar routes_1 = __importDefault(__webpack_require__(/*! ./routes */ \"./src/server/routes/index.ts\"));\nvar path_1 = __webpack_require__(/*! path */ \"path\");\nvar config_1 = __importDefault(__webpack_require__(/*! ./config */ \"./src/server/config/index.ts\"));\nvar app = (0, express_1.default)();\napp.use(express_1.default.static(\"public\"));\napp.use(routes_1.default);\napp.use(\"*\", function (req, res, next) {\n    try {\n        res.sendFile((0, path_1.join)(__dirname, \"../../public/index.html\"));\n    }\n    catch (error) {\n        next(error);\n    }\n});\napp.use(function (err, req, res, next) {\n    res.status(err.status || 500).json({\n        err: err.name,\n        msg: err.message,\n        custom: \"An error occurred on the server\",\n    });\n});\napp.listen(config_1.default.port, function () {\n    return console.log(\"Server listening on port \" + config_1.default.port + \"...\");\n});\n\n\n//# sourceURL=webpack://starter_template/./src/server/server.ts?");
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nvar express_1 = __importDefault(__webpack_require__(/*! express */ \"express\"));\r\nvar routes_1 = __importDefault(__webpack_require__(/*! ./routes */ \"./src/server/routes/index.ts\"));\r\nvar path_1 = __webpack_require__(/*! path */ \"path\");\r\nvar config_1 = __importDefault(__webpack_require__(/*! ./config */ \"./src/server/config/index.ts\"));\r\nvar app = (0, express_1.default)();\r\napp.use(express_1.default.static(\"public\"));\r\napp.use(routes_1.default);\r\napp.use(\"*\", function (req, res, next) {\r\n    try {\r\n        res.sendFile((0, path_1.join)(__dirname, \"../../public/index.html\"));\r\n    }\r\n    catch (error) {\r\n        next(error);\r\n    }\r\n});\r\napp.use(function (err, req, res, next) {\r\n    res.status(err.status || 500).json({\r\n        err: err.name,\r\n        msg: err.message,\r\n        custom: \"An error occurred on the server\",\r\n    });\r\n});\r\napp.listen(config_1.default.port, function () {\r\n    return console.log(\"Server listening on port \" + config_1.default.port + \"...\");\r\n});\r\n\n\n//# sourceURL=webpack://starter_template/./src/server/server.ts?");
 
 /***/ }),
 

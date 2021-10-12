@@ -2,6 +2,7 @@ import * as React from "react";
 
 const App = () => {
   fetch("https://healthruwords.p.rapidapi.com/v1/quotes/?t=Wisdom&maxR=1&size=medium&id=731", {
+    // mode: "cors",
     "method": "GET",
     "headers": {
       "x-rapidapi-host": "healthruwords.p.rapidapi.com",
@@ -9,7 +10,11 @@ const App = () => {
     }
   })
   .then(response => {
+    return response.json();
+  })
+  .then(response => {
     console.log(response);
+    document.querySelector('img').src = response.media;
   })
   .catch(err => {
     console.error(err);
@@ -17,6 +22,7 @@ const App = () => {
   return (
     <main>
       <h1>Hello World!</h1>
+      <img />
     </main>
   );
 };

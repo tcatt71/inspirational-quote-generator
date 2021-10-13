@@ -6,7 +6,7 @@ const App = () => {
 
   return (
     <main>
-      <div class="wrapper">
+      <div className="wrapper">
         <img />
         <button onClick={handleClick}>Recieve New Quote</button>
       </div>

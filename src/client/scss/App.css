@@ -19,5 +19,5 @@ button {
   display: block;
   margin: auto;
   border-radius: 5px;
-  background-color: hsla(240, 100%, 85%);
+  background-color: hsl(240, 100%, 85%);
 }

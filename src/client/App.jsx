@@ -8,7 +8,7 @@ const App = () => {
     <main>
       <div class="wrapper">
         <img />
-        <button onClick={handleClick}>Get Quote!</button>
+        <button onClick={handleClick}>Recieve New Quote</button>
       </div>
     </main>
   );

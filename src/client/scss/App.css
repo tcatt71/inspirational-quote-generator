@@ -9,10 +9,15 @@ main {
 }
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
   width: 300px;
+  height: 360px;
 }
 
 button {
   display: block;
   margin: auto;
+  border-radius: 5px;
+  background-color: hsl(240, 100%, 85%);
 }

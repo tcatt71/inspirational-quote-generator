@@ -6,8 +6,10 @@ const App = () => {
 
   return (
     <main>
-      <img />
-      <button onClick={handleClick}>Get Quote!</button>
+      <div class="wrapper">
+        <img />
+        <button onClick={handleClick}>Get Quote!</button>
+      </div>
     </main>
   );
 };

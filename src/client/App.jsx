@@ -1,14 +1,15 @@
 import * as React from "react";
-import handleClick from "./handleClick";
+import handleSubmitClick from "./handleSubmitClick";
 
 const App = () => {
-  handleClick();
+  handleSubmitClick();
 
   return (
     <main>
       <div className="wrapper">
         <img />
-        <button onClick={handleClick}>Recieve New Quote</button>
+        <button onClick={handleSubmitClick}>Recieve New Quote</button>
+        <input type="text" />
       </div>
     </main>
   );
